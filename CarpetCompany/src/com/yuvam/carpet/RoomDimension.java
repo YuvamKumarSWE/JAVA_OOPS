@@ -41,4 +41,11 @@ public class RoomDimension {
                 ", width=" + width +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof RoomDimension other)) return false;
+        return this.length == other.length && this.width == other.width;
+    }
+
 }

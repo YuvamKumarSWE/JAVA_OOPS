@@ -43,6 +43,16 @@ public class RoomCarpet {
                 ", totalCost=" + getTotalCost() +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof RoomCarpet other)) return false;
+        return this.rate == other.rate &&
+                this.roomDimension.equals(other.roomDimension);
+    }
+
+
+
 }
 
 
